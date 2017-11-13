@@ -1,3 +1,8 @@
+entrada:
+    path:      /entrada/{page}
+    defaults:  { _controller: EntradaBundle:Entrada:show }
+
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
