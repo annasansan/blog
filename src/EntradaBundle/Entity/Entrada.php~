@@ -1,0 +1,12 @@
+<?php
+
+namespace EntradaBundle\Entity;
+
+class Entrada
+{
+    private $id;
+    protected $titulo;
+    protected $descripcion;
+}
+
+

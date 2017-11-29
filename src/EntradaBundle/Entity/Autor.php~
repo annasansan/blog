@@ -1,0 +1,12 @@
+<?php
+namespace EntradaBundle\Entity;
+
+
+
+class Autor
+{
+    private $id;
+    protected $nombre;
+    protected $nick;
+}
+

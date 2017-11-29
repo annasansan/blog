@@ -1,0 +1,23 @@
+EntradaBundle\Entity\Entrada:
+manyToOne:
+  autor:
+    inversedBy: entradas
+
+  type: entity
+  table: entrada
+  manyToOne:
+    autor:
+      targetEntity: Autor
+      joinColumn:
+        name: autor_id
+        referencedColumnName: id
+  id:
+    id:
+      type: integer
+      generator: {strategy: AUTO}
+  fields:
+    titulo: 
+      type: string
+      length: 255
+    descripcion:
+      type: text
