@@ -1,14 +1,11 @@
 EntradaBundle\Entity\Entrada:
-manyToOne:
-  autor:
-    inversedBy: entradas
-
   type: entity
   table: entrada
   manyToOne:
     autor:
+      inversedBy: entrada      
       targetEntity: Autor
-      joinColumn:
+      joinColumn: 
         name: autor_id
         referencedColumnName: id
   id:
@@ -17,7 +14,6 @@ manyToOne:
       generator: {strategy: AUTO}
   fields:
     titulo: 
-      type: string
-      length: 255
+      type: text
     descripcion:
       type: text

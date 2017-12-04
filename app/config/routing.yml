@@ -2,6 +2,13 @@ entrada:
     path:      /entrada/{page}
     defaults:  { _controller: EntradaBundle:Entrada:show }
 
+autores:
+    path:      /autores/create
+    defaults:  { _controller: EntradaBundle:Autor:create }
+    
+entradas:
+    path:      /entradas/create
+    defaults:  { _controller: EntradaBundle:Entrada:create }
 
 app:
     resource: '@AppBundle/Controller/'

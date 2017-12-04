@@ -8,11 +8,9 @@ class Autor
     private $id;
     protected $nombre;
     protected $nick;
-    protected $entrada;
-    public function __construct($nombre,$nick){
+    public function __construct($nombre = null,$nick = null){
         $this->nombre=$nombre;
         $this->nick=$nick;
-        $this->entradas=entrada;
     }
     
     public function getEntradas() {

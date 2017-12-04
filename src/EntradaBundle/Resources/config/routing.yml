@@ -1,3 +1,6 @@
 entrada_homepage:
     path:     /
     defaults: { _controller: EntradaBundle:Default:index }
+entradas_autor_create:
+  pattern: /autores/create
+  defaults: { _controller: EntradaBundle:Autor:create}

@@ -8,10 +8,10 @@ class Entrada
     protected $descripcion;
     protected $autor;
 
-    public function __construct(Autor $autor,$nombre,$nick){
+    public function __construct(Autor $autor=null,$titulo=null,$descripcion=null){
         $this->autor=$autor;
-        $this->nombre=$nombre;
-        $this->nick=$nick;
+        $this->titulo=$titulo;
+        $this->descripcion=$descripcion;
     }
     /**
      * Get id
@@ -72,4 +72,28 @@ class Entrada
     }
     
     
+
+    /**
+     * Set autor
+     *
+     * @param \EntradaBundle\Entity\Author $autor
+     *
+     * @return Entrada
+     */
+    public function setAutor(\EntradaBundle\Entity\Author $autor = null)
+    {
+        $this->autor = $autor;
+
+        return $this;
+    }
+
+    /**
+     * Get autor
+     *
+     * @return \EntradaBundle\Entity\Author
+     */
+    public function getAutor()
+    {
+        return $this->autor;
+    }
 }
