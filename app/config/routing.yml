@@ -9,7 +9,10 @@ autores:
 entradas:
     path:      /entradas/create
     defaults:  { _controller: EntradaBundle:Entrada:create }
-
+entrada_homepage:
+    path:     /entradas
+    defaults: { _controller: EntradaBundle:Entrada:ultimasEntradas }
+    
 app:
     resource: '@AppBundle/Controller/'
     type: annotation

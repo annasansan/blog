@@ -8,7 +8,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use EntradaBundle\Entity\Entrada;
 use EntradaBundle\Form\EntradaType;
-
+use EntradaBundle\Model\UltimasEntradas;
 
 class EntradaController extends Controller
 
@@ -39,6 +39,15 @@ class EntradaController extends Controller
         // ...
         
         return $this->render('EntradaBundle:posts:show.html.twig',array('page'=>$page));
+    }
+    
+    public function ultimasEntradasAction() {
+       
+        $repository=$this->getDoctrine()->getRepository('EntradaBundle:Entrada');
+        $entradas=$repository->findultimasEntradas();
+       // return array('entrada',$entradas);
+        return $this->render('UltimasEntradas.html.twig', array('entradas' => $entradas));
+        //return array('entrada'=>$this->get('entradas.ultimas_entradas')->findFrom());
     }
     
 }

@@ -1,5 +1,6 @@
 EntradaBundle\Entity\Entrada:
   type: entity
+  repositoryClass: EntradaBundle\Repository\EntradaRepository
   table: entrada
   manyToOne:
     autor:
@@ -17,3 +18,4 @@ EntradaBundle\Entity\Entrada:
       type: text
     descripcion:
       type: text
+      

@@ -33,3 +33,7 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+    
+    entradas.ultimas_entradas:
+      class: EntradaBundle\Model\UltimasEntradas
+      arguments: ["@doctrine.orm.entity_manager"]
