@@ -42,7 +42,10 @@ class EntradaController extends Controller
     }
     
     public function ultimasEntradasAction() {
-       
+        $logger = $this->get('logger');
+        $ip = $this->container->get('request_stack')->getMasterRequest()->getClientIp();
+        $logger->error('Visita desde la IP: '.$ip);
+        
         $repository=$this->getDoctrine()->getRepository('EntradaBundle:Entrada');
         $entradas=$repository->findultimasEntradas();
        // return array('entrada',$entradas);

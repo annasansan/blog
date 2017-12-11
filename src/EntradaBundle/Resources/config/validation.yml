@@ -1,0 +1,13 @@
+EntradaBundle\Entity\Autor:
+properties:
+  nombre:
+    - NotBlank: ~
+  nick:
+    - NotBlank: ~
+    
+EntradaBundle\Entity\Entrada:
+properties:
+  titulo:
+    - NotBlank: ~
+  descripcion:
+    - NotBlank: ~
