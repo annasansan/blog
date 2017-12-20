@@ -1,3 +1,10 @@
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+
+
 entrada:
     path:      /entrada/{page}
     defaults:  { _controller: EntradaBundle:Entrada:show }
@@ -16,3 +23,16 @@ entrada_homepage:
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+login:
+  path: /login
+  defaults: { _controller: EntradaBundle:Security:login }
+  
+logout:
+  path: /logout
+  
+users_create:
+  path: /users/create
+  defaults: { _controller: UserBundle:Default:create }
+    
+    
